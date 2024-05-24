@@ -1,0 +1,90 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main{
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  gap: 20px;
+}
+.firstBox{
+  width: 100%;
+  height: 18%;
+  display: flex;
+  gap: 30px;
+}
+.firstBox div {
+  flex: 1;
+  background-color: blue;
+
+}
+.secondBox{
+  width: 100%;
+  background-color:rgb(241, 179, 7);
+  height: 32%;
+}
+.thirdBox{
+  width: 100%;
+  height: 32%;
+  display: flex;
+  gap: 30px;
+}
+.thirdBox div{
+  flex: 1;
+  background-color: green;
+}
+.fourthBox{
+  width: 100%;
+  height: 18%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid;
+  gap: 30px;
+}
+.fourthBox div{
+  background-color: red;
+}
+
+@media screen and (width <= 810px) {
+  .firstBox{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .thirdBox{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .fourthBox{
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+}
+
+@media screen and (width <= 414px) {
+  .fourthBox{
+    grid-template-columns: 1fr;
+  }
+  .fourthBox div{
+    height: 30px;
+
+  }
+  .remove{
+    display: none;
+  }
+}
+
+@media screen {
+  .firstBox{
+    flex-wrap: wrap;
+    
+  }
+}
